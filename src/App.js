@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 
-import './App.scss';
 import './reset.css';
+import './App.scss';
 
-import Header from './components/shared/Header';
-import Footer from './components/shared/Footer';
 import ResultsLayout from './components/routes/ResultsLayout';
 import HomeLayout from './components/routes/HomeLayout';
 

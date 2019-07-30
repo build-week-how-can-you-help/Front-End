@@ -13,7 +13,7 @@ function NonProfitList({ userQuery }) {
 
     return (
         <div className="non-profit-list">
-            <div class="for-testing">
+            <div className="for-testing">
                 <p style={{ fontSize: '1.3rem', color: 'red' }}>For testing purposes only</p>
                 <p style={{ color: 'red', marginBottom: '20px' }}>
                     The users query was: <span style={{ color: '#000' }}>{userQuery}</span>

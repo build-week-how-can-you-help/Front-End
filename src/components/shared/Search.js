@@ -21,7 +21,7 @@ function Search({ redirect, linkToResults, setUserQuery }) {
         <div className="search-form">
             <form>
                 <input type="text" placeholder="What are you looking for?" value={userInput} onChange={e => handleInput(e)} />
-                <button onClick={e => handleClick(e)}>New Search</button>
+                <button onClick={e => handleClick(e)}>Find Non-Profit</button>
             </form>
         </div>
     );
