@@ -1,10 +1,13 @@
 import React from 'react';
+import Search from './Search';
 
 function Header() {
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
+        <header className="site-header">
+            <div className="wrap">
+                <Search />
+            </div>
+        </header>
     );
 }
 
