@@ -9,7 +9,7 @@ function NonProfit({ nonProfit }) {
                 <h2>{name}</h2>
                 <ul>
                     <li>
-                        <a href={website} target="_blank">
+                        <a href={website} target="_blank" rel="noopener noreferrer">
                             {website}
                         </a>
                     </li>

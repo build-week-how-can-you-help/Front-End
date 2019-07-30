@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
 
 import './App.scss';
 import './reset.css';
@@ -9,24 +9,16 @@ import Footer from './components/shared/Footer';
 import Landing from './components/routes/Landing';
 import Results from './components/routes/Results';
 
-import { orgs } from './data.js';
-
 function App() {
-    const [nonProfits, setNonProfits] = useState([]);
-
-    useEffect(() => {
-        setNonProfits(orgs);
-    }, []);
+    const [userQuery, setUserQuery] = useState('');
 
     return (
         <div className="App">
-            <Header />
+            <Header setUserQuery={setUserQuery} />
             <main className="main-content">
                 <div className="wrap">
-                    <Switch>
-                        <Route path="/" component={Landing} />
-                        <Route path="/nonprofits" render={props => <Results {...props} nonProfits={orgs} />} />
-                    </Switch>
+                    <Route exact path="/" render={props => <Landing {...props} setUserQuery={setUserQuery} />} />
+                    <Route path="/results" render={props => <Results {...props} userQuery={userQuery} />} />
                 </div>
             </main>
             <Footer />

@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NonProfit from './NonProfit';
 
-function NonProfitList({ nonProfits }) {
-    console.log(nonProfits);
+import { orgs } from '../../data.js';
+
+function NonProfitList({ userQuery }) {
+    const [nonProfits, setNonProfits] = useState([]);
+
+    useEffect(() => {
+        setNonProfits(orgs);
+        console.log(userQuery);
+    }, [userQuery]);
+
     return (
         <div className="non-profit-list">
+            <div>
+                <p>The users query was: {userQuery}</p>
+            </div>
             {nonProfits.map(nonProfit => (
                 <NonProfit key={nonProfit.id} nonProfit={nonProfit} />
-            ))}{' '}
+            ))}
         </div>
     );
 }

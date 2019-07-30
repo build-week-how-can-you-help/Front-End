@@ -1,10 +1,10 @@
 import React from 'react';
 import NonProfitList from '../shared/NonProfitList';
 
-function Results({ nonProfits }) {
+function Results({ userQuery }) {
     return (
         <div>
-            <NonProfitList nonProfits={nonProfits} />
+            <NonProfitList userQuery={userQuery} />
         </div>
     );
 }
