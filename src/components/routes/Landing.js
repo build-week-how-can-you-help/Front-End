@@ -1,11 +1,7 @@
 import React from 'react';
 import Search from '../shared/Search';
 
-function Landing({ history, setUserQuery }) {
-    function linkToResults() {
-        history.push('/results');
-    }
-
+function Landing({ linkToResults, setUserQuery }) {
     return (
         <div>
             <Search redirect linkToResults={linkToResults} setUserQuery={setUserQuery} />

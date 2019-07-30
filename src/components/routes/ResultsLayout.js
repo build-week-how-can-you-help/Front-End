@@ -1,12 +1,16 @@
 import React from 'react';
+import Header from '../shared/Header';
+import Footer from '../shared/Footer';
+import Results from './Results';
 
-function ResultsLayout() {
+function ResultsLayout(props) {
+    const { setUserQuery } = props;
     return (
-        <div>
+        <div className="results">
+            <Header setUserQuery={setUserQuery} />
             <main className="main-content">
                 <div className="wrap">
-                    <Route exact path="/" render={props => <Landing {...props} setUserQuery={setUserQuery} />} />
-                    <Route path="/results" render={props => <Results {...props} userQuery={userQuery} />} />
+                    <Results {...props} />
                 </div>
             </main>
             <Footer />

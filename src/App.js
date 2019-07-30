@@ -6,22 +6,16 @@ import './reset.css';
 
 import Header from './components/shared/Header';
 import Footer from './components/shared/Footer';
-import Landing from './components/routes/Landing';
-import Results from './components/routes/Results';
+import ResultsLayout from './components/routes/ResultsLayout';
+import HomeLayout from './components/routes/HomeLayout';
 
 function App() {
     const [userQuery, setUserQuery] = useState('');
 
     return (
         <div className="App">
-            <Header setUserQuery={setUserQuery} />
-            <main className="main-content">
-                <div className="wrap">
-                    <Route exact path="/" render={props => <Landing {...props} setUserQuery={setUserQuery} />} />
-                    <Route path="/results" render={props => <Results {...props} userQuery={userQuery} />} />
-                </div>
-            </main>
-            <Footer />
+            <Route exact path="/" render={props => <HomeLayout {...props} setUserQuery={setUserQuery} />} />
+            <Route path="/results" render={props => <ResultsLayout {...props} userQuery={userQuery} setUserQuery={setUserQuery} />} />
         </div>
     );
 }
