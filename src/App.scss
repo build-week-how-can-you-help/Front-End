@@ -1,9 +1,17 @@
+/* --------------------
+VARIABLES
+----------------------- */
+
 $dark-yellow: #ffce00;
 $light-yellow: #fff369;
 $light-blue: #eaf6ff;
 $font-color: #666666;
-$call-to-action-btn: #ff7600;
+$orange: #ff7600;
 $dark-blue: #0093ff;
+
+/* --------------------
+GENERAL
+----------------------- */
 
 html {
     font-size: 62.5%;
@@ -15,9 +23,21 @@ body {
     text-align: left;
 }
 
+h1 {
+    font-size: 3.6rem;
+    color: $dark-yellow;
+    margin-bottom: 25px;
+    text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 h2 {
     font-size: 2.4rem;
     color: $dark-blue;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 a {
@@ -25,19 +45,9 @@ a {
     color: $dark-blue;
 }
 
-p {
+p,
+ul {
     font-size: 1.6rem;
-}
-
-header.site-header,
-footer.site-footer {
-    background: $light-yellow;
-    padding: 2% 0;
-}
-
-main.main-content {
-    background: $light-blue;
-    padding: 2% 0;
 }
 
 .wrap {
@@ -47,30 +57,119 @@ main.main-content {
 
 .flex {
     display: flex;
+    justify-content: space-between;
+}
+
+.flex.three-col > div {
+    width: 25%;
+}
+
+button {
+    transition: 0.25s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* --------------------
-SINGLE NON PROFIT
+HEADER/FOOTER
 ----------------------- */
 
-.non-profit {
-    padding: 2%;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border: 1px solid $dark-yellow;
-    margin-bottom: 2%;
+header.site-header,
+footer.site-footer {
+    background: $light-yellow;
+}
 
-    h2 {
-        border-bottom: 1px solid $font-color;
-        margin-bottom: 5px;
+header.site-header {
+    padding: 1% 0;
+}
+
+footer.site-footer {
+    padding: 2% 0;
+}
+
+/* --------------------
+MAIN CONTENT AREA
+----------------------- */
+
+main.main-content {
+    background: $light-blue;
+    position: relative;
+}
+
+/* --------------------
+HOME/LANDING PAGE
+----------------------- */
+
+.centered-content {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home {
+    main.main-content {
+        height: 100vh;
+        background: url('./assets/images/landing-page-background.jpg');
+        background-size: cover;
     }
 
-    ul {
+    form {
+        input,
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 90%;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: $orange;
+            color: #fff;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            font-size: 1.7rem;
+            font-weight: 500;
+            padding: 7px 14px;
+        }
+    }
+}
+
+/* --------------------
+RESULTS PAGE
+----------------------- */
+
+.results {
+    main.main-content {
+        padding: 2% 0;
+    }
+    .non-profit {
+        padding: 2%;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid $dark-yellow;
         margin-bottom: 2%;
-        font-size: 1.4rem;
-    }
 
-    li {
-        display: inline-block;
+        h2 {
+            border-bottom: 1px solid $font-color;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin-bottom: 2%;
+            font-size: 1.4rem;
+        }
+
+        li {
+            display: inline-block;
+        }
     }
 }

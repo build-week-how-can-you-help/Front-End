@@ -2,7 +2,7 @@ export const orgs = [
     {
         id: 0,
         name: 'Lorem Ipsum',
-        website: 'www.fakeiste.com',
+        website: 'www.fakesite.com',
         address: '123 Fake St., Los Angeles, CA 90023',
         phone: '555-555-5555',
         fax: '123-456-7890',
@@ -11,7 +11,7 @@ export const orgs = [
     {
         id: 1,
         name: 'Lorem Ipsum',
-        website: 'www.fakeiste.com',
+        website: 'www.fakesite.com',
         address: '123 Fake St., Los Angeles, CA 90023',
         phone: '555-555-5555',
         fax: '123-456-7890',
@@ -20,7 +20,7 @@ export const orgs = [
     {
         id: 2,
         name: 'Lorem Ipsum',
-        website: 'www.fakeiste.com',
+        website: 'www.fakesite.com',
         address: '123 Fake St., Los Angeles, CA 90023',
         phone: '555-555-5555',
         fax: '123-456-7890',
@@ -29,7 +29,7 @@ export const orgs = [
     {
         id: 3,
         name: 'Lorem Ipsum',
-        website: 'www.fakeiste.com',
+        website: 'www.fakesite.com',
         address: '123 Fake St., Los Angeles, CA 90023',
         phone: '555-555-5555',
         fax: '123-456-7890',
