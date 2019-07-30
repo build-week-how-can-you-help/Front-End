@@ -1,0 +1,76 @@
+$dark-yellow: #ffce00;
+$light-yellow: #fff369;
+$light-blue: #eaf6ff;
+$font-color: #666666;
+$call-to-action-btn: #ff7600;
+$dark-blue: #0093ff;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'PT Sans', arial, sans-serif;
+    color: $font-color;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2.4rem;
+    color: $dark-blue;
+}
+
+a {
+    text-decoration: none;
+    color: $dark-blue;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+header.site-header,
+footer.site-footer {
+    background: $light-yellow;
+    padding: 2% 0;
+}
+
+main.main-content {
+    background: $light-blue;
+    padding: 2% 0;
+}
+
+.wrap {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* --------------------
+SINGLE NON PROFIT
+----------------------- */
+
+.non-profit {
+    padding: 2%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid $dark-yellow;
+    margin-bottom: 2%;
+
+    h2 {
+        border-bottom: 1px solid $font-color;
+        margin-bottom: 5px;
+    }
+
+    ul {
+        margin-bottom: 2%;
+        font-size: 1.4rem;
+    }
+
+    li {
+        display: inline-block;
+    }
+}
