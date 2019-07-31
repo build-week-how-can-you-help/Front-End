@@ -3,7 +3,7 @@ import NonProfit from './NonProfit';
 
 import { orgs } from '../../data.js';
 
-function NonProfitList({ userQuery }) {
+function NonProfitList({ userQuery, userZip }) {
     const [nonProfits, setNonProfits] = useState([]);
 
     useEffect(() => {
@@ -17,6 +17,9 @@ function NonProfitList({ userQuery }) {
                 <p style={{ fontSize: '1.3rem', color: 'red' }}>For testing purposes only</p>
                 <p style={{ color: 'red', marginBottom: '20px' }}>
                     The users query was: <span style={{ color: '#000' }}>{userQuery}</span>
+                </p>
+                <p style={{ color: 'red', marginBottom: '20px' }}>
+                    The users zip code was: <span style={{ color: '#000' }}>{userZip}</span>
                 </p>
             </div>
             {nonProfits.map(nonProfit => (

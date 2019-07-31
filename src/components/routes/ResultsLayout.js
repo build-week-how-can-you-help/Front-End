@@ -5,13 +5,13 @@ import Footer from '../shared/Footer';
 import Results from './Results';
 
 function ResultsLayout(props) {
-    const { setUserQuery } = props;
+    const { setUserQuery, setUserZip } = props;
     return (
         <div className="results">
-            <Header setUserQuery={setUserQuery} />
+            <Header setUserQuery={setUserQuery} setUserZip={setUserZip} />
             <main className="main-content">
                 <div className="wrap">
-                    <Results {...props} />
+                    <Results {...props} setUserQuery={setUserQuery} setUserZip={setUserZip} />
                 </div>
             </main>
             <Footer />

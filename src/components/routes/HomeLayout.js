@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '../shared/Footer';
 import Landing from './Landing';
 
-function HomeLayout({ history, setUserQuery }) {
+function HomeLayout({ history, setUserQuery, setUserZip }) {
     function linkToResults() {
         history.push('/results');
     }
@@ -11,7 +11,7 @@ function HomeLayout({ history, setUserQuery }) {
     return (
         <div className="home">
             <main className="main-content">
-                <Landing setUserQuery={setUserQuery} linkToResults={linkToResults} />
+                <Landing setUserQuery={setUserQuery} setUserZip={setUserZip} linkToResults={linkToResults} />
             </main>
             <Footer />
         </div>
