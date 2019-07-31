@@ -15,9 +15,9 @@ function NonProfit({ nonProfit }) {
                     </li>
                     <li>{address}</li>
                     <li>
-                        <a href={`tel:${phone}`}>{phone}</a>
+                        Phone: <a href={`tel:${phone}`}>{phone}</a>
                     </li>
-                    <li>{fax}</li>
+                    <li>Fax: {fax}</li>
                 </ul>
             </div>
             <div className="description">

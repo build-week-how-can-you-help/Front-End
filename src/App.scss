@@ -58,10 +58,6 @@ label > span {
     display: none;
 }
 
-input {
-    -webkit-appearance: meter;
-}
-
 .wrap {
     max-width: 850px;
     margin: 0 auto;
@@ -92,18 +88,33 @@ HEADER/FOOTER
 header.site-header,
 footer.site-footer {
     background: $light-yellow;
+
+    a {
+        font-weight: 600;
+    }
 }
 
 header.site-header {
     padding: 1% 0;
+    border-bottom: 1px solid $font-color;
 
-    ul li {
+    li {
         display: inline-block;
+        margin-right: 25px;
+        vertical-align: -7px;
+    }
+
+    li:last-child {
+        margin-right: 0;
     }
 }
 
 footer.site-footer {
     padding: 2% 0;
+
+    li {
+        margin-bottom: 10px;
+    }
 }
 
 /* --------------------
@@ -142,17 +153,44 @@ HOME/LANDING PAGE
         label:first-child {
             width: 80%;
             margin-left: -30px;
+
+            input {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: 1px solid $font-color;
+                border-right: none;
+            }
         }
 
         label:last-of-type {
             width: 20%;
-            margin-left: -29px;
+            margin-left: -32px;
+            position: relative;
+
+            input {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border: 1px solid $font-color;
+                border-left: none;
+            }
+        }
+
+        label:last-of-type:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 1px;
+            height: 32px;
+            background-color: $font-color;
         }
 
         input {
             width: 90%;
             font-size: 2rem;
             margin-bottom: 20px;
+            padding: 7px;
         }
 
         input:focus {
@@ -181,6 +219,7 @@ RESULTS PAGE
     main.main-content {
         padding: 2% 0;
     }
+
     .non-profit {
         padding: 2%;
         background-color: #ffffff;
@@ -200,6 +239,89 @@ RESULTS PAGE
 
         li {
             display: inline-block;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        li:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -10px;
+            top: 0px;
+            width: 1px;
+            height: 12px;
+            background-color: $font-color;
+        }
+
+        li:first-child:after {
+            display: none;
+        }
+    }
+
+    form {
+        text-align: center;
+
+        label {
+            display: inline-block;
+        }
+
+        label:first-child {
+            width: 60%;
+
+            input {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: 1px solid $dark-yellow;
+                border-right: none;
+            }
+        }
+
+        label:last-of-type {
+            width: 15%;
+            margin-left: -32px;
+            position: relative;
+
+            input {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border: 1px solid $dark-yellow;
+                border-left: none;
+            }
+        }
+
+        label:last-of-type:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 1px;
+            height: 32px;
+            background-color: $font-color;
+        }
+
+        input {
+            width: 90%;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding: 7px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            background-color: $dark-yellow;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1.7rem;
+            font-weight: 500;
+            padding: 9px 14px;
+            display: inline-block;
+            margin-left: 15px;
+            vertical-align: 2px;
         }
     }
 }
