@@ -50,6 +50,18 @@ ul {
     font-size: 1.6rem;
 }
 
+p {
+    margin-bottom: 10px;
+}
+
+label > span {
+    display: none;
+}
+
+input {
+    -webkit-appearance: meter;
+}
+
 .wrap {
     max-width: 850px;
     margin: 0 auto;
@@ -60,7 +72,7 @@ ul {
     justify-content: space-between;
 }
 
-.flex.three-col > div {
+.flex.two-col > div {
     width: 25%;
 }
 
@@ -84,6 +96,10 @@ footer.site-footer {
 
 header.site-header {
     padding: 1% 0;
+
+    ul li {
+        display: inline-block;
+    }
 }
 
 footer.site-footer {
@@ -119,16 +135,28 @@ HOME/LANDING PAGE
     }
 
     form {
-        input,
-        button {
-            display: block;
-            margin: 0 auto;
+        label {
+            display: inline-block;
+        }
+
+        label:first-child {
+            width: 80%;
+            margin-left: -30px;
+        }
+
+        label:last-of-type {
+            width: 20%;
+            margin-left: -29px;
         }
 
         input {
             width: 90%;
             font-size: 2rem;
             margin-bottom: 20px;
+        }
+
+        input:focus {
+            outline: none;
         }
 
         button {
@@ -139,6 +167,8 @@ HOME/LANDING PAGE
             font-size: 1.7rem;
             font-weight: 500;
             padding: 7px 14px;
+            display: block;
+            margin: 0 auto;
         }
     }
 }

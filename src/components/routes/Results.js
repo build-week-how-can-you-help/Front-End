@@ -1,10 +1,13 @@
 import React from 'react';
-import NonProfitList from '../shared/NonProfitList';
 
-function Results({ userQuery }) {
+import NonProfitList from '../shared/NonProfitList';
+import Search from '../shared/Search';
+
+function Results({ userQuery, userZip, setUserQuery, setUserZip }) {
     return (
         <div>
-            <NonProfitList userQuery={userQuery} />
+            <Search setUserQuery={setUserQuery} setUserZip={setUserZip} />
+            <NonProfitList userQuery={userQuery} userZip={userZip} />
         </div>
     );
 }
