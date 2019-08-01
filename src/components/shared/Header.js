@@ -10,7 +10,7 @@ function Header({ setUserQuery, setUserZip }) {
             <div className="wrap">
                 <div className="flex">
                     <Link to="/">
-                        <img src={logo} />
+                        <img src={logo} alt="How Can You Help Logo" />
                     </Link>
                     <ul>
                         <li>
