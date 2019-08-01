@@ -98,6 +98,10 @@ header.site-header {
     padding: 1% 0;
     border-bottom: 1px solid $font-color;
 
+    @media (max-width: 900px) {
+        padding: 1% 4%;
+    }
+
     li {
         display: inline-block;
         margin-right: 25px;
@@ -111,6 +115,10 @@ header.site-header {
 
 footer.site-footer {
     padding: 2% 0;
+
+    @media (max-width: 900px) {
+        padding: 4%;
+    }
 
     li {
         margin-bottom: 10px;
@@ -136,6 +144,11 @@ HOME/LANDING PAGE
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: fit-content;
+
+    @media (max-width: 500px) {
+        padding: 0 2%;
+    }
 }
 
 .home {
@@ -218,6 +231,10 @@ RESULTS PAGE
 .results {
     main.main-content {
         padding: 2% 0;
+
+        @media (max-width: 900px) {
+            padding: 4%;
+        }
     }
 
     .non-profit {
@@ -262,12 +279,20 @@ RESULTS PAGE
     form {
         text-align: center;
 
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+
         label {
             display: inline-block;
         }
 
         label:first-child {
             width: 60%;
+
+            @media (max-width: 650px) {
+                width: 75%;
+            }
 
             input {
                 border-top-left-radius: 5px;
@@ -281,6 +306,10 @@ RESULTS PAGE
             width: 15%;
             margin-left: -32px;
             position: relative;
+
+            @media (max-width: 650px) {
+                width: 25%;
+            }
 
             input {
                 border-top-right-radius: 5px;
@@ -322,6 +351,11 @@ RESULTS PAGE
             display: inline-block;
             margin-left: 15px;
             vertical-align: 2px;
+
+            @media (max-width: 650px) {
+                display: block;
+                margin: 0 auto;
+            }
         }
     }
 }

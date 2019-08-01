@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import NonProfit from './NonProfit';
 
 import { orgs } from '../../data.js';
@@ -9,6 +10,10 @@ function NonProfitList({ userQuery, userZip }) {
     useEffect(() => {
         setNonProfits(orgs);
         console.log(userQuery);
+
+        axios.get('https://projects.propublica.org/nonprofits/api/v2/search.json').then(res => {
+            console.log(res);
+        });
     }, [userQuery]);
 
     return (
@@ -27,6 +32,17 @@ function NonProfitList({ userQuery, userZip }) {
             ))}
         </div>
     );
+
+    // , {
+    //     headers: {
+    //         'Access-Control-Allow-Origin': '*',
+    //         'Content-Type': 'application/json'
+    //     },
+    //     proxy: {
+    //         host: '66.43.34.50',
+    //         port: 8080
+    //     }
+    // }
 }
 
 export default NonProfitList;
