@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NonProfit from './NonProfit';
+import loading from '../../assets/images/loading.gif';
 
 // import { orgs } from '../../data.js';
 
@@ -34,7 +35,7 @@ function NonProfitList({ userQuery, userZip }) {
     let searchResults;
 
     if (!nonProfits.length) {
-        searchResults = 'Non-profits are loading...';
+        searchResults = <img className="loading-gif" src={loading} width="75" height="75" alt="loading animation" />;
     } else {
         searchResults = nonProfits.map((nonProfit, index) => <NonProfit key={index} nonProfit={nonProfit} />);
     }

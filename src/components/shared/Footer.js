@@ -9,7 +9,9 @@ function Footer() {
                         <h3>Contact</h3>
                         <p>123 Fake St., Los Angeles, CA 90023</p>
                         <p>
-                            <a href="#">something@something.com</a>
+                            <a className="email-link" href="#">
+                                something@something.com
+                            </a>
                         </p>
                     </div>
                     <div>

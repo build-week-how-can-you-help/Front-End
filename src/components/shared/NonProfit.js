@@ -1,7 +1,8 @@
 import React from 'react';
 
 function NonProfit({ nonProfit }) {
-    const { name, website, address, phone, fax, description } = nonProfit;
+    const { name, website, address, city, description } = nonProfit;
+    const zip = nonProfit['zip code'];
 
     return (
         <div className="non-profit">
@@ -13,11 +14,9 @@ function NonProfit({ nonProfit }) {
                             {website}
                         </a>
                     </li>
-                    <li>{address}</li>
                     <li>
-                        Phone: <a href={`tel:${phone}`}>{phone}</a>
+                        {address}, {city}, MD {zip}
                     </li>
-                    <li>Fax: {fax}</li>
                 </ul>
             </div>
             <div className="description">
