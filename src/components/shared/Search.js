@@ -21,8 +21,6 @@ function Search({ redirect, linkToResults, setUserQuery, setUserZip }) {
 
         setUserQuery(userInput);
         setUserZip(zipInput);
-        setUserInput('');
-        setZipInput('');
 
         if (redirect) {
             linkToResults();

@@ -43,6 +43,7 @@ h3 {
 a {
     text-decoration: none;
     color: $dark-blue;
+    transition: 0.25s ease-in-out;
 }
 
 p,
@@ -122,6 +123,15 @@ footer.site-footer {
 
     li {
         margin-bottom: 10px;
+    }
+
+    a.email-link {
+        color: $font-color;
+        font-weight: initial;
+
+        &:hover {
+            color: $dark-blue;
+        }
     }
 }
 
@@ -244,6 +254,10 @@ RESULTS PAGE
         border: 1px solid $dark-yellow;
         margin-bottom: 2%;
 
+        &:last-child {
+            margin-bottom: 0;
+        }
+
         h2 {
             border-bottom: 1px solid $font-color;
             margin-bottom: 5px;
@@ -258,22 +272,35 @@ RESULTS PAGE
             display: inline-block;
             position: relative;
             margin-right: 20px;
-        }
 
-        li:after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: -10px;
-            top: 0px;
-            width: 1px;
-            height: 12px;
-            background-color: $font-color;
-        }
+            @media (max-width: 700px) {
+                display: block;
+            }
 
-        li:first-child:after {
-            display: none;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: -10px;
+                top: 0px;
+                width: 1px;
+                height: 12px;
+                background-color: $font-color;
+
+                @media (max-width: 700px) {
+                    display: none;
+                }
+            }
+
+            &:first-child:after {
+                display: none;
+            }
         }
+    }
+
+    .loading-gif {
+        display: block;
+        margin: 0 auto;
     }
 
     form {
@@ -354,7 +381,7 @@ RESULTS PAGE
 
             @media (max-width: 650px) {
                 display: block;
-                margin: 0 auto;
+                margin: 0 auto 20px;
             }
         }
     }
